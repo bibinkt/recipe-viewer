@@ -135,28 +135,7 @@ export default function RecipePage() {
       
       <div className="recipe-page">
         {/* Navigation Bar */}
-        <nav className="nav">
-          <div className="nav-content">
-            <Link href="/" className="logo">
-              🍽️ Recipes
-            </Link>
-            <div className="nav-actions">
-              <span className="views">👀 {views} views</span>
-              <span className="recipe-meta">
-                🍽️ {recipe.cuisine} • ⏱️ {recipe.total_time_minutes}min
-              </span>
-              <button onClick={handleShare} className="action-button share-button">
-                📤 Share
-              </button>
-              <button onClick={downloadHTML} className="action-button download-button">
-                💾 Download
-              </button>
-              <button onClick={handlePrint} className="action-button print-button">
-                🖨️ Print
-              </button>
-            </div>
-          </div>
-        </nav>
+
 
         {/* Recipe Content */}
         <main className="recipe-main">
@@ -167,27 +146,7 @@ export default function RecipePage() {
         </main>
 
         {/* Footer */}
-        <footer className="recipe-footer">
-          <div className="footer-content">
-            <p>Recipe viewed on {new Date().toLocaleDateString()}</p>
-            <div className="recipe-stats-footer">
-              <span>🏷️ {recipeData.status || 'draft'}</span>
-              <span>📅 Created: {new Date(recipeData.created_at).toLocaleDateString()}</span>
-              {recipeData.slug && <span>🔗 Slug: {recipeData.slug}</span>}
-            </div>
-            <div className="footer-actions">
-              <button onClick={handleShare} className="footer-button">
-                📤 Share Recipe
-              </button>
-              <button onClick={downloadHTML} className="footer-button">
-                💾 Download HTML
-              </button>
-              <Link href="/" className="footer-button">
-                🏠 More Recipes
-              </Link>
-            </div>
-          </div>
-        </footer>
+
       </div>
     </>
   )
