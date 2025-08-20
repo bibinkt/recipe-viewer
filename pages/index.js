@@ -105,7 +105,7 @@ export default function Home() {
                             >
                               🌶️
                             </span>
-                            <span className="stat-value">{recipe.spice_level || 0}/10</span>
+                            <span className="stat-value">{recipe.spice_level || 0}/5</span>
                           </div>
                           <div className="recipe-stat">
                             <span 
